@@ -51,3 +51,18 @@ SELECT State,COUNT(*) FROM address_book WHERE State = 'Madhya Pradesh';
 #UC-8
 SELECT * FROM address_book ORDER BY Fname;
 SELECT * FROM address_book WHERE City = 'Jalgaon' ORDER BY Fname;
+
+#UC9
+ALTER TABLE address_book ADD address_book_name VARCHAR(50) NOT NULL AFTER Email;
+ALTER TABLE address_book ADD address_book_type VARCHAR(50) NOT NULL AFTER address_book_name;
+
+DESC address_book;
+SELECT * FROM address_book;
+
+UPDATE address_book SET address_book_name = 'AB1' WHERE Fname = 'Paresh' OR Fname = 'Snehal';
+UPDATE address_book SET address_book_name = 'AB2' WHERE Fname = 'Sakshi' OR Fname = 'Animesh';
+UPDATE address_book SET address_book_name = 'AB3' WHERE Fname = 'Nakul';
+
+UPDATE address_book SET address_book_type = 'Friends' WHERE address_book_name = 'AB1';
+UPDATE address_book SET address_book_type = 'Work' WHERE address_book_name = 'AB2';
+UPDATE address_book SET address_book_type = 'Family' WHERE address_book_name = 'AB3';
