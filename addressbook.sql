@@ -47,3 +47,7 @@ SELECT * FROM address_book WHERE State = 'Madhya Pradesh';
 #UC7
 SELECT City,COUNT(*) FROM address_book WHERE City = 'Jalgaon';
 SELECT State,COUNT(*) FROM address_book WHERE State = 'Madhya Pradesh';
+
+#UC-8
+SELECT * FROM address_book ORDER BY Fname;
+SELECT * FROM address_book WHERE City = 'Jalgaon' ORDER BY Fname;
