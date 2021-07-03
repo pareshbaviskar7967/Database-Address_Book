@@ -43,3 +43,7 @@ WHERE Fname = 'Pratham';
 #UC6
 SELECT * FROM address_book WHERE City = 'Ahmadnagar';
 SELECT * FROM address_book WHERE State = 'Madhya Pradesh';
+
+#UC7
+SELECT City,COUNT(*) FROM address_book WHERE City = 'Jalgaon';
+SELECT State,COUNT(*) FROM address_book WHERE State = 'Madhya Pradesh';
