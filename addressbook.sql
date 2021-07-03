@@ -25,3 +25,9 @@ VALUES (101,'Paresh','22kar','Sagar park','Jalgaon','Maharashtra',425001,'870809
        (104,'Snehal','Kale','Sagar park','Jalgaon','Maharashtra',425001,'9564984532','snehal@email'),
        (105,'Nakul','Upadhyay','Inner ring road','Indore','Madhya Pradesh',425001,'123456789','nakul@email');
 SELECT * FROM address_book;
+
+#UC4
+UPDATE address_book
+SET Address = 'MalbarHill area'
+WHERE Fname = 'Snehal';
+SELECT * FROM address_book;
