@@ -97,3 +97,13 @@ SELECT * FROM address_book_work;
 
 #UC12
 #ER DIAGRAM
+
+#UC13
+#Redoing UC6, Retrieving data from address book using city or state..
+SELECT * FROM address_book a1, address_book_work w1 WHERE a1.Id = w1.address_book_id  AND City = 'Jalgaon';
+
+#Redoing UC7, Count by city or state..
+SELECT City,COUNT(*) AS count FROM address_book a1, address_book_friends f1 WHERE a1.Id = f1.address_book_id  AND City = 'Ahmadnagar';
+
+#Redoing UC8, Sort by first name..
+SELECT * FROM address_book a1, address_book_friends f1 WHERE a1.Id = f1.address_book_id ORDER BY Fname;
