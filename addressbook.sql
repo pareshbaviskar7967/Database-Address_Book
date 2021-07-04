@@ -94,3 +94,6 @@ CREATE table address_book_work(
 );
 INSERT INTO address_book_work (address_book_id) VALUES ('102'),('103');
 SELECT * FROM address_book_work;
+
+#UC12
+#ER DIAGRAM
