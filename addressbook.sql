@@ -69,3 +69,28 @@ UPDATE address_book SET address_book_type = 'Family' WHERE address_book_name = '
 
 #UC10
 SELECT address_book_type,COUNT(*) FROM address_book WHERE address_book_type = 'Friends';
+
+#UC11
+CREATE TABLE address_book_friends(
+    Id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+    address_book_id INT ,
+    FOREIGN KEY (address_book_id) REFERENCES address_book(Id)
+);
+INSERT INTO address_book_friends (address_book_id) VALUES ('101'),('104');
+SELECT * FROM address_book_friends;
+
+CREATE table address_book_family(
+    Id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+    address_book_id INT ,
+    FOREIGN KEY (address_book_id) REFERENCES address_book(Id)
+);
+INSERT INTO address_book_family (address_book_id) VALUES ('105');
+SELECT * FROM address_book_family;
+
+CREATE table address_book_work(
+    Id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+    address_book_id INT ,
+    FOREIGN KEY (address_book_id) REFERENCES address_book(Id)
+);
+INSERT INTO address_book_work (address_book_id) VALUES ('102'),('103');
+SELECT * FROM address_book_work;
